@@ -4,65 +4,89 @@
 <meta charset="UTF-8">
 <title>Rescue Bread Co.</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet">
-<style>
 
+<style>
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #F6F1E8;
-  color: #4A3828;
+  background: #f6f1e8;
+  color: #4a3828;
 }
 
+/* HEADER */
 header {
+  background: #fff;
   text-align: center;
   padding: 20px;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
+header img {
+  width: 220px;
 }
 
-.hero {
-  background: url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec') center/cover;
-  padding: 100px 20px;
-  color: white;
+/* NAV */
+nav {
+  background: #7b4b24;
+  padding: 10px;
   text-align: center;
 }
 
-.hero h2 {
-  font-size: 36px;
+nav a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.button {
-  background-color: #5F7F62;
+/* HERO */
+.hero {
+  background: url("https://images.unsplash.com/photo-1608198093002-ad4e005484ec") center/cover;
+  padding: 120px 20px;
+  color: white;
+  text-align: left;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 42px;
+}
+
+.btn {
+  background: #6c8c5f;
   color: white;
   padding: 12px 20px;
+  margin-right: 10px;
   text-decoration: none;
-  margin: 10px;
-  display: inline-block;
   border-radius: 5px;
 }
 
+/* SECTIONS */
 .section {
   padding: 50px 20px;
   text-align: center;
 }
 
-.breads {
+/* BREAD CARDS */
+.cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
   background: white;
-  padding: 20px;
-  width: 250px;
+  width: 280px;
+  padding: 15px;
   border-radius: 10px;
 }
 
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ABOUT */
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -72,14 +96,27 @@ h1 {
 }
 
 .about img {
-  width: 250px;
+  width: 260px;
   border-radius: 10px;
 }
 
+/* FOOTER */
 footer {
-  text-align: center;
+  background: #7b4b24;
+  color: white;
   padding: 20px;
-  background: #D8B384;
+  text-align: center;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 </style>
@@ -88,32 +125,50 @@ footer {
 <body>
 
 <header>
-  <img src="IMG_4741.png" style="width:180px;">
-  <p>Wasting Less. Baking Better.</p>
+  <img src="IMG_4341.png">
 </header>
 
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Our Breads</a>
+  <a href="#">About</a>
+  <a href="#">Order</a>
+  <a href="#">Contact</a>
+</nav>
+
 <section class="hero">
-  <h2>Plant-Based Artisan Bread Made from Rescued Ingredients</h2>
-  <a href="#" class="button">Order Now</a>
+  <h1>Wasting Less. Baking Better.</h1>
+  <p>Plant-based artisan breads made from rescued and surplus ingredients — baked fresh in small batches in the Bay Area.</p>
+
+  <p>✔ High-Protein ✔ 100% Plant-Based ✔ Upcycled Ingredients ✔ Small-Batch & Fresh</p>
+
+  <a class="btn" href="#">Order Now</a>
 </section>
 
 <section class="section">
   <h2>Our Breads</h2>
-  <div class="breads">
+
+  <div class="cards">
 
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec">
       <h3>Hidden Veggie Loaf</h3>
-      <p>Savory artisan loaf made with rescued vegetables like carrots, zucchini, and greens.</p>
+      <p><i>Have your bread and get your daily veggie intake too.</i></p>
+      <a class="btn" href="hidden-veggie.html">Order</a>
     </div>
 
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73">
       <h3>Sweet Rescue Loaf</h3>
-      <p>A rotating sweet loaf using rescued pantry ingredients like banana, cocoa, or fruit.</p>
+      <p><i>Dessert, but make it nutritious.</i></p>
+      <a class="btn" href="sweet-loaf.html">Order</a>
     </div>
 
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1586449480558-5c1c3d9f0df3">
       <h3>Gluten-Free Loaf</h3>
-      <p>High-protein gluten-free bread made with chickpea and whole grain flours.</p>
+      <p><i>Clean ingredients. Powerful nutrition.</i></p>
+      <a class="btn" href="gluten-free.html">Order</a>
     </div>
 
   </div>
@@ -121,30 +176,50 @@ footer {
 
 <section class="section">
   <h2>Why Rescue Bread?</h2>
-  <p>40% of food in the U.S. goes to waste. We turn surplus ingredients into delicious, nutrient-dense bread.</p>
+
+  <p>Every loaf I bake:</p>
+  <p>🌱 reduces food waste<br>
+  🌱 supports plant-based eating<br>
+  🌱 provides nutrient-dense whole foods<br>
+  🌱 celebrates seasonal ingredients</p>
+
+  <p>Our breads are always:</p>
+  <p>• Plant-based • Freshly baked • Small batch • No unnecessary additives</p>
 </section>
 
 <section class="section about">
-  <img src="https://drive.google.com/file/d/1ekFqq1kJPldyV3sMAikKUZB77BQDL-qM/view?usp=drivesdk" alt="Ujala">
-  <div>
+  <img src="YOUR_IMAGE_HERE">
+
+  <div style="max-width:500px; text-align:left;">
     <h2>Meet the Baker</h2>
-    <p>Hi, I’m Ujala Chauhan.
-I’m a student at New York University studying Nutrition and Food Studies and Environmental Science.
-Rescue Bread Co. began when I started experimenting with bread baking and realized how many ingredients we throw away.
-One day I turned carrot greens — something most people discard — into a savory garlic ciabatta.
-It was incredible.
-That moment sparked an idea:
-What if we could transform surplus ingredients into incredible breads instead of throwing them away?
-Now I bake breads that are:
-plant-based
-high-protein
-nutrient-dense
-made from rescued ingredients</p>
+
+    <p>Hi, I’m Ujala Chauhan.</p>
+
+    <p>I’m a student at New York University studying Nutrition and Food Studies and Environmental Science.</p>
+
+    <p>Rescue Bread Co. began when I started experimenting with bread baking and realized how many ingredients we throw away.</p>
+
+    <p>One day I turned carrot greens into a savory garlic ciabatta. It was incredible.</p>
+
+    <p><b>What if we could transform surplus ingredients into incredible breads instead of throwing them away?</b></p>
+
+    <p>Now I bake breads that are:
+    plant-based, high-protein, nutrient-dense, and made from rescued ingredients.</p>
+
   </div>
 </section>
 
 <footer>
-  <p>Belmont, CA • Plant-Based • Small Batch</p>
+
+<p>Belmont, California • Serving the Bay Area</p>
+
+<p>📧 rescuebreadco.com | Custom orders available</p>
+
+<div class="socials">
+  <a href="#">Instagram @rescuebreadco</a>
+  <a href="#">TikTok @rescuebreadco</a>
+</div>
+
 </footer>
 
 </body>
