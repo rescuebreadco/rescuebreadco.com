@@ -130,6 +130,8 @@ nav a:hover {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; /* enables alignment fix */
 }
 
 .card img {
@@ -145,6 +147,12 @@ nav a:hover {
   padding: 0 15px 15px;
   font-size: 14px;
 }
+  .card a {
+  margin-top: auto;          /* pushes button to bottom */
+  display: flex;
+  justify-content: center;   /* centers button */
+  padding-bottom: 15px;
+}
 
 /* ABOUT */
 .about {
@@ -152,11 +160,14 @@ nav a:hover {
   gap: 40px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center; /* centers everything */
 }
 
 .about img {
   width: 320px;
   border-radius: 10px;
+  display: block;
+  margin: 0 auto; /* centers image */
 }
 
 /* FOOTER */
